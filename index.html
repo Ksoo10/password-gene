@@ -3,141 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Site</title>
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="password.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"><script src="https://kit.fontawesome.com/3937ce99b0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-<section>
+   <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">About Us</a></li>
+    </ul>
+   </nav>
 
-    <div class="img-container">
-        <img src="https://www.pexels.com/photo/bowl-of-cooked-food-3590401/" alt="">
-       </div>
-    
-</section>
-<section>
-    <div class="ingredients">
-        <h1>Romantic Chicken with Artichokes and Mushrooms</h1>
-        <h2>Ingredients</h2>
-        <ul>
-            <li>4 skinless, boneless chicken breast halves</li>
-            <li>salt and pepper to taste</li>
-            <li>1 tablespoon olive oil</li>
-            <li>1 tablespoon butter</li>
-            <li>1 (14 ounce) can marinated quartered artichoke hearts, drained, liquid reserved</li>
-            <li>1 cup sliced fresh mushrooms</li>
-            <li>1 cup white wine</li>
-            <li>1 tablespoon capers</li>
-        </ul>
+<section class="welcome-section">
+    <div class="header-wrapper">
+        <h1 class="sub-heading">Generate strong, secure passwords with ease—welcome to the <span class="text-color">Password Generator</span>!</h1>
+        <p class="sub-header-text">Create strong and secure passwords to keep your accounts and information safe.</p> 
     </div>
-</section>
 
-<section> 
-    <div class="directions">
-        <h2>Directions</h2>
-            <div class="steps">
-                <h3>Step 1</h3>
-                <p>Season chicken with salt and pepper. Heat oil and butter in a large skillet over medium heat. Brown chicken in oil and butter for 5 to 7 minutes per side; remove from skillet, and set aside.</p>
-                <h3>Step 2</h3>
-                <p>Place artichoke hearts and mushrooms in the skillet, and saute until mushrooms are brown and tender. Return chicken to skillet, and pour in reserved artichoke liquid and wine. Reduce heat to low, and simmer for about 10 to 15 minutes, until chicken is no longer pink and juices run clear.</p>
-                <h3>Step 3</h3>
-                <p>Stir in capers, and simmer for another 5 minutes. Remove from heat; serve immediately.</p>
-            </div>
+    <div class="main-wrapper">
+            <div class="container">
+        <form id="password-form">
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" name="length" min="4" max="20" value="12">
+            <br>
+            <label for="uppercase">Include Uppercase Letters:</label>
+            <input type="checkbox" id="uppercase" name="uppercase" checked>
+            <br>
+            <label for="numbers">Include Numbers:</label>
+            <input type="checkbox" id="numbers" name="numbers" checked>
+            <br>
+            <label for="symbols">Include Symbols:</label>
+            <input type="checkbox" id="symbols" name="symbols">
+            <br>
+            <label for="generated-password">Generated Password:</label>
+            <input type="text"  id="generated-password" readonly name="name"  minlength="4" maxlength="20" size="10" />
+            <br>
             <div class="btn-group">
-                <button class="primary-btn">Contact Us</button>  
-                <button class="primary-btn">Save recipe</button>
+                <button id="generate-btn" type="button" class="primary-btn">Generate Password</button>
+            <button  id="copy-btn" type="reset" class="primary-btn">Copy to clipboard</button>
             </div>
-        
+        </form>
+           </div>
     </div>
 </section>
-
-<section>
-    <div class="nutrition-facts">
-        <h2>Nutrition Facts</h2>
-        <div class="wrapper">
-            <p><b>312</b> Calories</p>
-            <p><b>16g</b></p>
-        </div>
-        <div class="wrapper-2">
-            <p><b>312</b> Calories</p>
-            <p><b>16g</b></p>
-        </div>
-        <a href="https://www.allrecipes.com/recipe/20704/romantic-chicken-with-artichokes-and-mushrooms/">Full Nutrition Label</a>
+<section class="about-us">
+    <div class="header-wrapper">
+        <h2 class="sub-header">What Makes A Password Strong?</h2>
     </div>
-   
-
+    <div class="flex-box-container">
+        <div class="flex-box-item">
+            <div class="card">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3 class="">Length</h3>
+                <p>A strong password should be at least 12 characters long.</p>
+            </div>
+        </div>
+        <div class="flex-box-item">
+            <div class="card">
+                <i class="fa-solid fa-user-secret"></i>
+                <h3>Complexity</h3>
+                <p>Use a mix of uppercase letters, lowercase letters, numbers, and symbols.</p>
+            </div>
+        </div>
+        <div class="flex-box-item">
+            <div class="card">
+                <i class="fa-solid fa-id-card"></i>
+                <h3>Unpredictability</h3>
+                <p>Avoid using easily guessable information like birthdays or common words.</p>
+            </div>
+        </div>
+    </div>
 </section>
-
-<section class="form-section"> 
-    <form class="responsive-form" action="/submit-form" method="post">
-        <div class="form-group">
-             <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" name="first-name" required><br>
+<section class="faq">
+    <div class="header-wrapper">
+        <h2 class="faq-header">Password Security FAQ</h2>
+        <p>Find answers to the most common questions about keeping your passwords safe.</p>
     </div>
-      
-    <div class="form-group">
-        
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required><br>
-    </div>
-      
-        <div class="form-group">
-            <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required><br>
-    </div>
-      
-    <div class="form-group">
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><br>
-    </div>
-    <div class="form-group">
-        <label for="options">Preferred Contact method</label>
-        <select id="options" name="options" required>
-          <option value="email">Email</option>
-          <option value="phone">Phone</option>
-          <option value="text">Text</option>
-        </select><br>
-        </div>
-    </div>
-      
-        <button type="submit">Submit</button>
-      </form>
-      
-</section>
-  <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>About Us</h3>
-            <p>Information about the company.</p>
-        </div>
-        <div class="footer-section">
-       
-            <button class="primary-btn">Contact Us</button>  
-        </div>
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-            <div class="social-media-list">
-                <ul>
-                    <li class="social-icon"><a href="" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                    <li></li>
-                    <li></li>
+<div class="flebox-container">
+    <div class="faq-details">
+        <details>
+            <summary><h5>Why should I use a password generator?</h5></summary>
+            <div class="detail-wrapper">
+                <h4 class="detail-header">Stay Ahead of Hackers with Strong, Random Passwords</h4>
+                <p class="detail-text"> 
+                    In today's digital landscape, weak passwords are no match for modern computing power. Hackers can effortlessly test billions of password combinations in mere seconds, putting sensitive information at risk. That’s why we’ve developed a <b>free online password generator</b> —a tool to strengthen your security. Powered by advanced algorithms, it creates truly <b>random, mathematically secure passwords</b>, ensuring your private data stays protected.
+                    </p>
+            </div>
+        </details>
+        <details>
+            <summary><h5>What makes a password safe?</h5></summary>
+            <div class="detail-wrapper">
+                <h4 class="detail-header"> Key Elements of a Strong Password</h4>
+                <p class="detail-text">
+                    A safe password is <b>strong, unique, and difficult to guess</b>. The key characteristics of a secure password include sufficient length <b>(at least 12-16 characters)</b> and a <b>random combination of uppercase and lowercase letters, numbers, and special symbols</b>. Avoiding common words, predictable patterns, and personal information, like birthdays or names—further strengthens its security.
+                    </p> 
+                    
+            </div>
+        </details>
+        <details>
+            <summary><h5>What are some examples of bad passwords?</h5></summary>
+            <div class="detail-wrapper">
+                <h4 class="detail-header">Here are some examples of bad passwords:</h4>
+                <p class="detail-text"> These are the <b>10 most vulnerable passwords</b> of the year—proof that randomness isn’t a human strength. Instead of risking security with predictable choices, opt for an algorithmic password generator (like above) for stronger protection! </p>
+                <ul class="detail-list">
+                    <li>12356</li>
+                    <li>Password</li>
+                    <li>Basketball</li>
+                    <li>123456789</li>
+                    <li>Football</li>
+                    <li>QWERTY</li>
                 </ul>
             </div>
-        </div>
+        </details>
     </div>
+</div>
+</section>
+<footer>    
+    <div class="footer-wrapper">
+        <p>&copy; 2025 Password Generator. All rights reserved.</p>
+    </div>
+    <div class="footer-bottom">
+        <p>Created by CloudScape Web</p>
 </footer>
-
+<script src="passwordgene.js"></script>
 </body>
 </html>
